@@ -17,20 +17,20 @@
     --popover-foreground: 210 15% 15%;
 
     /* Construction Orange Primary */
-    --primary: 18 100% 58%;
+    --primary: 25 95% 55%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 18 100% 50%;
-    --primary-light: 18 100% 95%;
+    --primary-hover: 25 95% 45%;
+    --primary-light: 25 95% 95%;
 
-    /* Industrial Gray Secondary */
-    --secondary: 210 8% 45%;
+    /* Professional Blue Secondary */
+    --secondary: 215 85% 50%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-light: 210 8% 95%;
+    --secondary-light: 215 85% 95%;
 
-    /* Steel Blue Accent */
-    --accent: 210 25% 25%;
+    /* Deep Blue Accent */
+    --accent: 220 70% 35%;
     --accent-foreground: 0 0% 100%;
-    --accent-light: 210 25% 95%;
+    --accent-light: 220 70% 95%;
 
     --muted: 210 15% 96%;
     --muted-foreground: 210 10% 45%;
@@ -49,10 +49,11 @@
 
     --radius: 0.75rem;
 
-    /* Construction Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
+    /* Professional Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--primary-light)) 100%);
     --gradient-industrial: linear-gradient(180deg, hsl(var(--secondary)) 0%, hsl(var(--accent)) 100%);
+    --gradient-footer: linear-gradient(180deg, hsl(var(--accent)) 0%, hsl(210 25% 15%) 100%);
 
     /* Shadows */
     --shadow-construction: 0 4px 20px hsl(var(--primary) / 0.15);
@@ -86,18 +87,18 @@
     --popover: 210 15% 10%;
     --popover-foreground: 210 15% 95%;
 
-    --primary: 18 100% 58%;
+    --primary: 25 95% 55%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 18 100% 50%;
-    --primary-light: 18 100% 15%;
+    --primary-hover: 25 95% 45%;
+    --primary-light: 25 95% 15%;
 
-    --secondary: 210 8% 25%;
-    --secondary-foreground: 210 15% 95%;
-    --secondary-light: 210 8% 15%;
+    --secondary: 215 85% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 215 85% 15%;
 
-    --accent: 210 25% 35%;
-    --accent-foreground: 210 15% 95%;
-    --accent-light: 210 25% 15%;
+    --accent: 220 70% 35%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 220 70% 15%;
 
     --muted: 210 15% 15%;
     --muted-foreground: 210 10% 65%;
@@ -113,9 +114,10 @@
     --input: 210 15% 20%;
     --ring: 18 100% 58%;
 
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--primary-light)) 100%);
     --gradient-industrial: linear-gradient(180deg, hsl(var(--secondary)) 0%, hsl(var(--accent)) 100%);
+    --gradient-footer: linear-gradient(180deg, hsl(var(--accent)) 0%, hsl(210 25% 15%) 100%);
 
     --shadow-construction: 0 4px 20px hsl(var(--primary) / 0.25);
     --shadow-card: 0 2px 10px hsl(var(--accent) / 0.2);
@@ -138,5 +140,18 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Interactive Elements */
+  .story-link {
+    @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+  
+  .pulse-subtle {
+    @apply animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite];
   }
 }

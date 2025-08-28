@@ -116,11 +116,12 @@ export default {
 					'50%': { transform: 'translateY(-5px)' }
 				}
 			},
-			backgroundImage: {
-				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-card': 'var(--gradient-card)',
-				'gradient-industrial': 'var(--gradient-industrial)'
-			},
+            backgroundImage: {
+                'gradient-hero': 'var(--gradient-hero)',
+                'gradient-card': 'var(--gradient-card)',
+                'gradient-industrial': 'var(--gradient-industrial)',
+                'gradient-footer': 'var(--gradient-footer)'
+            },
 			boxShadow: {
 				'construction': 'var(--shadow-construction)',
 				'card-hover': 'var(--shadow-hover)',

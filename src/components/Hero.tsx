@@ -8,13 +8,13 @@ export const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-[70vh] flex items-center overflow-hidden">
+    <section id="home" className="relative min-h-[50vh] flex items-center overflow-hidden">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-accent/90 to-accent/60"></div>
+        <div className="absolute inset-0 bg-gradient-hero opacity-90"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
