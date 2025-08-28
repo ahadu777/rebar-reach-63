@@ -1,6 +1,6 @@
 import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
-import { CategoryGrid } from '@/components/CategoryGrid';
+import { HierarchicalProductFilter } from '@/components/HierarchicalProductFilter';
 import { ContactSales } from '@/components/ContactSales';
 
 const Index = () => {
@@ -9,7 +9,7 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <CategoryGrid />
+        <HierarchicalProductFilter />
         <ContactSales />
       </main>
       <footer className="bg-accent text-accent-foreground py-8">
