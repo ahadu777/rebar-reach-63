@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Construction Materials Supplier Design System */
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --background: 0 0% 98%;
+    --foreground: 210 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 15% 15%;
+
+    /* Construction Orange Primary */
+    --primary: 18 100% 58%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 18 100% 50%;
+    --primary-light: 18 100% 95%;
+
+    /* Industrial Gray Secondary */
+    --secondary: 210 8% 45%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 210 8% 95%;
+
+    /* Steel Blue Accent */
+    --accent: 210 25% 25%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 210 25% 95%;
+
+    --muted: 210 15% 96%;
+    --muted-foreground: 210 10% 45%;
+
+    /* Quality/Success Green */
+    --success: 142 70% 45%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 142 70% 95%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 15% 90%;
+    --input: 210 15% 90%;
+    --ring: 18 100% 58%;
+
+    --radius: 0.75rem;
+
+    /* Construction Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
+    --gradient-industrial: linear-gradient(180deg, hsl(var(--secondary)) 0%, hsl(var(--accent)) 100%);
+
+    /* Shadows */
+    --shadow-construction: 0 4px 20px hsl(var(--primary) / 0.15);
+    --shadow-card: 0 2px 10px hsl(var(--accent) / 0.1);
+    --shadow-hover: 0 8px 30px hsl(var(--primary) / 0.2);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 210 15% 8%;
+    --foreground: 210 15% 95%;
+
+    --card: 210 15% 10%;
+    --card-foreground: 210 15% 95%;
+
+    --popover: 210 15% 10%;
+    --popover-foreground: 210 15% 95%;
+
+    --primary: 18 100% 58%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 18 100% 50%;
+    --primary-light: 18 100% 15%;
+
+    --secondary: 210 8% 25%;
+    --secondary-foreground: 210 15% 95%;
+    --secondary-light: 210 8% 15%;
+
+    --accent: 210 25% 35%;
+    --accent-foreground: 210 15% 95%;
+    --accent-light: 210 25% 15%;
+
+    --muted: 210 15% 15%;
+    --muted-foreground: 210 10% 65%;
+
+    --success: 142 70% 45%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 142 70% 15%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 15% 95%;
+
+    --border: 210 15% 20%;
+    --input: 210 15% 20%;
+    --ring: 18 100% 58%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
+    --gradient-industrial: linear-gradient(180deg, hsl(var(--secondary)) 0%, hsl(var(--accent)) 100%);
+
+    --shadow-construction: 0 4px 20px hsl(var(--primary) / 0.25);
+    --shadow-card: 0 2px 10px hsl(var(--accent) / 0.2);
+    --shadow-hover: 0 8px 30px hsl(var(--primary) / 0.3);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
